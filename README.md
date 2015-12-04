@@ -1,0 +1,1 @@
+这是一个简简单单的MX4Pro外挂Recovery安装APP，直接使用Android Studio加载项目编译即可

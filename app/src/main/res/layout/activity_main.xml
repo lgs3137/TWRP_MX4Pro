@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/uninstall_recovery"
+        android:width="158dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uninstall"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/reboot_recovery"
+        android:layout_alignStart="@+id/reboot_recovery" />
+    <Button
+        android:id="@+id/reboot_recovery"
+        android:width="158dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reboot"
+        android:layout_below="@+id/install_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+    <Button
+        android:id="@+id/install_button"
+        android:width="158dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/install"
+        android:layout_marginTop="151dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/reboot_recovery" />
+
+</RelativeLayout>
