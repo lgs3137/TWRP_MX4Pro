@@ -110,7 +110,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 install.writeBytes("chmod 775 /system/xbin/busybox\n");
                 install.writeBytes("rm -rf /system/twrp\n");
                 install.writeBytes("cp -rf /data/data/lgs3137.twrpmx4pro/install-recovery.sh /system/bin\n");
+                install.writeBytes("cp -rf /data/data/lgs3137.twrpmx4pro/install-recovery.sh /system/etc\n");
                 install.writeBytes("chmod 775 /system/bin/install-recovery.sh\n");
+                install.writeBytes("chmod 775 /system/etc/install-recovery.sh\n");
                 install.writeBytes("busybox tar -xv -C /system -f /data/data/lgs3137.twrpmx4pro/twrp.tar.xz\n");
                 install.writeBytes("sleep 8000\n");
                 install.flush();
