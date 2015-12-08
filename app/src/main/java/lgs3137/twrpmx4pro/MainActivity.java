@@ -115,6 +115,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 install.writeBytes("chmod 775 /system/etc/install-recovery.sh\n");
                 install.writeBytes("busybox tar -xv -C /system -f /data/data/lgs3137.twrpmx4pro/twrp.tar.xz\n");
                 install.writeBytes("sleep 8000\n");
+                install.writeBytes("mount -o ro,remount /system\n");
                 install.flush();
                 install.close();
             } catch (NullPointerException e) {
@@ -131,6 +132,7 @@ public class MainActivity extends Activity implements OnClickListener {
             DataOutputStream reboot = new DataOutputStream(
                     process.getOutputStream());
             reboot.writeBytes("touch /cache/recovery/command\n");
+            reboot.writeBytes("sleep 800\n");
             reboot.writeBytes("reboot\n");
         } catch (Exception e) {
             Log.e("Reboot", e.getMessage());
@@ -145,6 +147,7 @@ public class MainActivity extends Activity implements OnClickListener {
             uninstall.writeBytes("mount -o rw,remount /system\n");
             uninstall.writeBytes("rm -rf /system/twrp\n");
             uninstall.writeBytes("sync\n");
+            uninstall.writeBytes("mount -o ro,remount /system\n");
             uninstall.flush();
             uninstall.close();
         } catch (Exception e) {
