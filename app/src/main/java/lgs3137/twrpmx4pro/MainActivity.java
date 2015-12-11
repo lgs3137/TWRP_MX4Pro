@@ -132,7 +132,6 @@ public class MainActivity extends Activity implements OnClickListener {
             DataOutputStream reboot = new DataOutputStream(
                     process.getOutputStream());
             reboot.writeBytes("touch /cache/recovery/command\n");
-            reboot.writeBytes("sleep 800\n");
             reboot.writeBytes("reboot\n");
         } catch (Exception e) {
             Log.e("Reboot", e.getMessage());
