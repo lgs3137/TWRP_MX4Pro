@@ -1,7 +1,6 @@
 #!/system/bin/sh
 setenforce 0
 echo high > /sys/power/power_mode
-setprop sys.usb.config mtp,adb
 unset LD_PRELOAD
 stop
 cat /dev/input/event6 > /dev/keycheck & sleep 1

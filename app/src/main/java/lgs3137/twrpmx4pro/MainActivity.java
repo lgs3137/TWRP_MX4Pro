@@ -74,7 +74,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
             case R.id.reboot_recovery:
                 rebootRecovery();
-                info = Toast.makeText(getApplicationContext(), "重启TWRP", Toast.LENGTH_LONG);
+                info = Toast.makeText(getApplicationContext(), "请重启手机", Toast.LENGTH_LONG);
                 info.show();
                 break;
             case R.id.uninstall_recovery:
@@ -132,7 +132,7 @@ public class MainActivity extends Activity implements OnClickListener {
             DataOutputStream reboot = new DataOutputStream(
                     process.getOutputStream());
             reboot.writeBytes("touch /cache/recovery/command\n");
-            reboot.writeBytes("reboot\n");
+//            reboot.writeBytes("reboot\n");
         } catch (Exception e) {
             Log.e("Reboot", e.getMessage());
         }
